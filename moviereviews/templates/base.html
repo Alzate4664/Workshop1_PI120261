@@ -18,6 +18,15 @@
     <div class="container-fluid">
 
         <a class="navbar-brand" href="{% url 'home' %}">
+           {% load static %}
+
+            <img
+                src="{% static 'images/home.png' %}"
+                alt="Home"
+                width="30"
+                height="24"
+                class="d-inline-block align-text-top">
+
             Movies
         </a>
 
@@ -50,9 +59,13 @@
                     </a>
                 </li>
 
+                <a class="nav-link" href="{% url 'statistics' %}">
+                    Statistics
+                </a>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Statistics
+                    <a class="nav-link" href="{% url 'genre_statistics' %}">
+                        Genres
                     </a>
                 </li>
 
